@@ -1,0 +1,57 @@
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+# 设置用户名和邮箱
+[user]
+    name = zhenhappy
+    email = q505507538@gmail.com
+# 设置vim作为默认的提交注释编辑器,用Sublime也是可以的,但是操作不够便捷
+[core]
+    autocrlf = input
+    editor = vim
+# 设置常用指令别名
+[alias]
+    # 添加所有未添加到版本的文件到缓冲区
+    ad = add . -A
+    # git rb n = git rebase -i HEAD~n (n为整数1,2,3...),非常牛逼的指令,关键时刻有意想不到的功能
+    rb = "!sh -c \"git rebase -i HEAD~$1\" -"
+    # 使用vim编辑备注并提交
+    ci = commit -a -v
+    # 使用默认备注并提交
+    cm = commit -m"default commit"
+    # 修改最后一次提交的备注
+    ca = commit --amend
+    # checkout不用多说了
+    co = checkout
+    # rebase完了之后要返回栈顶指针就用这个
+    rc = rebase --continue
+    # 查看文件修改状态,这个指令将会大量使用到
+    st = status -s
+    # 分支操作指令
+    br = branch
+    # 和之前版本文件比较指令
+    df = diff
+    # 和缓冲区文件比较指令
+    dc = diff --cached
+    # 查看日志,不过这个不好用,基本用不上,除非是Windows,如果是Mac或者Linux的话推荐使用tig代替
+    lg = log -p
+    # 重置掉未提交的文件修改,前提是这些文件要在版本管理中
+    throw = reset --hard HEAD
+    # 已经提交后,如果要反悔,就不能用上面那个指令,用这个扔掉最后一个版本的提交
+    throwh = reset --hard HEAD^
+[color]
+    ui = true
+[push]
+    default = current
+
+# 设置sublime作为默认的mergetool
+[mergetool "sublime"]
+    cmd = subl -w $MERGED
+    trustExitCode = false
+[merge]
+    tool = sublime
+
+# 读取osx里的密码，不用每次都输入帐号密码
+[credential]
+    helper = osxkeychain

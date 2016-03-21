@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>co.macid.launcher</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/env</string>
+    <string>python2.7</string>
+    <string>-c</string>
+    <string>__import__('os').system('sleep 60 && open /Applications/MacID.app')</string>
+  </array>
+
+	<key>RunAtLoad</key>
+	<true/>
+
+</dict>
+</plist>

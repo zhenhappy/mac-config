@@ -1,3 +1,6 @@
 [submodule "FinderTools"]
 	path = FinderTools
 	url = git@github.com:zhenhappy/FinderTools.git
+[submodule "sublime-config"]
+	path = sublime-config
+	url = git@github.com:zhenhappy/sublime-config.git

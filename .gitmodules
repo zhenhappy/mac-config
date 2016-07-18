@@ -1,0 +1,3 @@
+[submodule "FinderTools"]
+	path = FinderTools
+	url = git@github.com:zhenhappy/FinderTools.git

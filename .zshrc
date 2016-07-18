@@ -61,13 +61,12 @@ CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 M2_HOME=~/Applications/Servers/Maven/apache-maven-3.3.9
 
 # Gradle HOME
-GRADLE_HOME=~/Applications/Servers/Gradle/gradle-2.10
+GRADLE_HOME=~/Applications/Servers/Gradle/gradle-3.0-milestone-2
 
 # Android HOME
-ADT_HOME=~/Library/Android/sdk
-P_TOOLS=$ADT_HOME/platform-tools
-TOOLS=$ADT_HOME/tools
-ANDROID_HOME=$P_TOOLS:$TOOLS
+ANDROID_HOME=~/Library/Android/sdk
+P_TOOLS=$ANDROID_HOME/platform-tools
+TOOLS=$ANDROID_HOME/tools
 
 # My Command HOME
 COMMAND=~/Documents/Shell
@@ -77,11 +76,17 @@ export JAVA_HOME
 export CLASSPATH
 export ANDROID_HOME
 export CLICOLOR=1
-export PATH=$COMMAND:/usr/local/bin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:$PATH
+
+# THEOS
+export THEOS=/opt/theos
+export THEOS_DEVICE_IP=192.168.5.2 THEOS_DEVICE_PORT=22
+
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:$TOOLS:$P_TOOLS:$THEOS/bin:$COMMAND:$PATH
 
 # Proxy Environment
-export http_proxy=http://127.0.0.1:8087/
-export https_proxy=http://127.0.0.1:8087/
+# export http_proxy=http://127.0.0.1:8087/
+# export https_proxy=http://127.0.0.1:8087/
+# export ALL_PROXY=socks5://127.0.0.1:8048
 
 # Homebrew GitHub API Token
 export HOMEBREW_GITHUB_API_TOKEN=768e5d5217dc416d5d7da781026c2bd2ce2e436d
@@ -133,11 +138,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
-alias ss='export http_proxy=http://127.0.0.1:8032 https_proxy=http://127.0.0.1:8032'
-alias go='export http_proxy=http://127.0.0.1:8087 https_proxy=http://127.0.0.1:8087'
+alias ss='export http_proxy=http://127.0.0.1:8016 https_proxy=http://127.0.0.1:8016'
+alias gg='export http_proxy=http://127.0.0.1:8087 https_proxy=http://127.0.0.1:8087'
 alias noproxy='unset http_proxy https_proxy'
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
+#alias server='open http://localhost && sudo python -m SimpleHTTPServer 80'
+alias server='sudo python -m SimpleHTTPServer 80'
+alias ifconfig='~/Documents/Shell/ifconfig.sh'
 
 #alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
@@ -148,3 +155,6 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 #alias for git
 alias ga="git add ."
 alias gitall="git_check_all.sh"
+
+#alias for gifi
+#alias npm=gifi

@@ -1,0 +1,10 @@
+#!/bin/bash
+clear
+if [ -z "$1" ]; then
+  read -p "请输入要测试的端口号:"
+  netstat -an | grep $REPLY
+  pause
+else
+  netstat -an | grep $1
+  pause
+fi

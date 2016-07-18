@@ -73,7 +73,7 @@
 				<key>Class Name</key>
 				<string>AMOpenFinderItems</string>
 				<key>InputUUID</key>
-				<string>B2E1A853-119E-412E-A3FD-789EE206E885</string>
+				<string>C1F07E8E-5648-4E63-9A27-6C91B811352E</string>
 				<key>Keywords</key>
 				<array>
 					<string>打开</string>
@@ -81,9 +81,9 @@
 					<string>文件</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>7B573A91-5DA9-458B-832F-0380004B78E1</string>
+				<string>FBE23D97-DC21-4445-9B52-372151224002</string>
 				<key>UUID</key>
-				<string>37858EAE-AEC2-483C-9619-AB6C47A90D1F</string>
+				<string>EE4FF13D-2705-4A9B-881A-997A734F6BE9</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Finder</string>
@@ -109,7 +109,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>769.000000:174.000000</string>
+				<string>309.000000:174.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Open Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -121,10 +121,6 @@
 	<dict/>
 	<key>workflowMetaData</key>
 	<dict>
-		<key>serviceApplicationBundleID</key>
-		<string>com.apple.finder</string>
-		<key>serviceApplicationPath</key>
-		<string>/System/Library/CoreServices/Finder.app</string>
 		<key>serviceInputTypeIdentifier</key>
 		<string>com.apple.Automator.fileSystemObject.folder</string>
 		<key>serviceOutputTypeIdentifier</key>
